@@ -5,6 +5,7 @@ import com.tulio.apimarket.domain.repository.ProductRepository;
 import com.tulio.apimarket.persistence.crud.ProductoCrudRepository;
 import com.tulio.apimarket.persistence.entity.Producto;
 import com.tulio.apimarket.persistence.mapper.ProductMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -12,7 +13,10 @@ import java.util.Optional;
 
 @Repository
 public class ProductoRepository implements ProductRepository {
+    @Autowired
     private ProductoCrudRepository productoCrudRepository;
+
+    @Autowired
     private ProductMapper mapper;
 
     @Override
